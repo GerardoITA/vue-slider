@@ -33,20 +33,20 @@
                 <div class="thumbs">
                     <div @click="prevFunction" class="prev"></div>
                     <div @click="nextFunction" class="next"></div>
-                    <div :class="myClass">
-                        <img :src="movies.images[0]" alt="Svezia" /> 
+                    <div v-for="(thumbImage , index) in movies.images" :class="index === imageActive ? classActive : classNonActive " class="thumb">
+                        <img  :src="thumbImage"   alt="Svezia" /> 
                     </div>
-                    <div :class="myClass">
+                    <!-- <div class="thumb" :class="classActive">
                         <img :src="movies.images[1]" alt="Ratchet & Clank" /> 
                     </div>
-                    <div :class="myClass">
+                    <div class="thumb" :class="classActive">
                          <img :src="movies.images[2]" alt="Fortnite" /> 
                     </div>
-                    <div :class="myClass">
+                    <div class="thumb" :class="classActive">
                         <img :src="movies.images[3]" alt="Stray" /> 
                     </div>
-                    <div :class="myClass">
-                         <img :src="movies.images[4]" alt="Avengers" /> 
+                    <div class="thumb" :class="classActive">
+                         <img :src="movies.images[4]" alt="Avengers" />  -->
                     </div>
                 </div>
 

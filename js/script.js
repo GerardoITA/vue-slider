@@ -29,7 +29,8 @@ createApp({
     data() {
         return {
             imageActive: 0,
-            myClass: `thumb`,
+            classActive: `active`,
+            classNonActive: ``,
            
 
             movies:{
@@ -63,7 +64,7 @@ createApp({
     },
     methods: {
         prevFunction: function(){
-            if (this.imageActive == 0){
+            if (this.imageActive == 0 ){
                 this.imageActive = 4;
             } else {
                 this.imageActive--;
@@ -80,6 +81,9 @@ createApp({
             console.log(this.imageActive)
     
         },
+        function(){
+
+        }
     
     }
 }).mount(`#app`)
