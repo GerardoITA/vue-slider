@@ -17,11 +17,11 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="movies.images[imageActive]" alt="" />
+                    <img :src="movies[imageActive].image" alt="" />
                     <div class="text">
-                        <h3>{{movies.titles[imageActive]}}</h3>
+                        <h3>{{movies[imageActive].title}}</h3>
                         <p>
-                            {{movies.texts[imageActive]}}
+                            {{movies[imageActive].text}}
                           <!--   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
                             tempore aliquid deleniti aut
                             veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
@@ -33,8 +33,8 @@
                 <div class="thumbs">
                     <div @click="prevFunction" class="prev"></div>
                     <div @click="nextFunction" class="next"></div>
-                    <div v-for="(thumbImage , index) in movies.images" :class="index === imageActive ? classActive : classNonActive " class="thumb">
-                        <img  :src="thumbImage"   alt="Svezia" /> 
+                    <div v-for="(thumbImage , index) in movies" :class="index === imageActive ? classActive : classNonActive " class="thumb">
+                        <img  :src="thumbImage.image"   alt="Svezia" /> 
                     </div>
                     <!-- <div class="thumb" :class="classActive">
                         <img :src="movies.images[1]" alt="Ratchet & Clank" /> 
